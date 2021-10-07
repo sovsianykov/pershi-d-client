@@ -1,0 +1,17 @@
+@import "../../query";
+
+.layout {
+  display: flex;
+  align-items: center;
+  max-width: 1150px;
+  margin: 120px auto 0;
+  background: url("../../assets/rGDpPL.jpg") no-repeat center center/cover;
+  border-right: 2px solid #0a5d7e;
+  border-left: 2px solid #0a5d7e;
+  @include sm {
+    margin: 120px auto 0;
+    width: 100%;
+    padding: 0;
+    overflow-x:  hidden;
+  }
+}

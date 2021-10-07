@@ -1,0 +1,35 @@
+@import "../../query";
+.footer {
+  width: 100%;
+  height: 100px;
+  background: linear-gradient( 0deg ,#0e729d, #b6dcf5 10% , #0e729d);
+  position: fixed;
+  bottom: 0;
+  left: 0 ;
+  @include sm {
+    height: 50px;
+    z-index: 6;
+    position: fixed;
+    bottom: 0;
+  }
+
+  .container {
+    max-width: 1150px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    @include sm {
+      height: 50px;
+      z-index: 6;
+      position: fixed;
+      bottom: 0;
+      margin: 0 ;
+
+    }
+
+    .icons {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
