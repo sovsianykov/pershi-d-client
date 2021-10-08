@@ -19,7 +19,7 @@ const Routing = () => {
              <Layout>
                  <Switch>
                      <Route exact path='/' component={ Home } />
-                     <Route path='/homework' component={ Homeworks } />
+                     <Route path='/homeworks' component={ Homeworks } />
                      <Route path='/finances' component={ Finances } />
                  </Switch>
              </Layout>

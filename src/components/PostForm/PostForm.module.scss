@@ -1,0 +1,23 @@
+.formContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  .labelForm {
+    margin-top: 30px;
+    .inputField {
+      display: block;
+      width: 380px;
+      height: 30px;
+    }
+  }
+  .labelForm {
+    margin-top: 30px;
+    .inputArea {
+      display: block;
+      width: 380px!important;
+      min-height: 200px;
+    }
+  }
+}
