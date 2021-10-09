@@ -53,7 +53,7 @@ const PostHomeworkModal = ({onClick, active}) => {
     const classNames = useMemo(() => cn({
     [classes.modal]: true,
     [classes.modalActive]: active,
-        }),[active])
+        }),[active,classes.modal,classes.modalActive])
     const onClickHandler = useCallback(()=>{
 
         onClick()
