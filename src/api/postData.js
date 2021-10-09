@@ -4,7 +4,7 @@ export function postData(data) {
     try {
 
 
-        axios.post("/save/message",{data}).then(res => console.log(res.data))
+        axios.post("/save/message", data ).then(res => console.log(res.data))
     } catch (e) {
         console.log(e.message)
     }
