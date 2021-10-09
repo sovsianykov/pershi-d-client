@@ -1,11 +1,11 @@
 import React, {useCallback, useMemo, useState} from 'react';
 import styles from './PostHomeworkModal.module.scss';
 import cn from 'classnames'
-import {Button, Paper, Typography} from "@material-ui/core";
+import {Button, Paper } from "@material-ui/core";
 import PostForm from "../PostForm/PostForm";
 import { makeStyles } from "@material-ui/core";
 
-const useStyles  = makeStyles(theme => ({
+const useStyles  = makeStyles(() => ({
      modal:{
          width:"100%",
          height: "100vh",
@@ -50,12 +50,11 @@ const useStyles  = makeStyles(theme => ({
 
 const PostHomeworkModal = ({onClick, active}) => {
     const classes = useStyles()
-    console.log(classes.modalActive)
+
     const classNames = useMemo(() => cn({
     [classes.modal]: true,
     [classes.modalActive]: active,
         }),[active])
-    console.log(active, "modal")
     const onClickHandler = useCallback(()=>{
 
         onClick()

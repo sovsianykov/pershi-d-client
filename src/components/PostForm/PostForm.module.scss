@@ -23,4 +23,12 @@
       min-height: 200px;
     }
   }
+  .btn {
+    margin-top: 10px;
+    background: linear-gradient( 0deg , #0c6385, #86a8be 10% , #0e729d);
+    transition: .4s ease-in-out;
+    &:hover {
+      background: #074259;
+    }
+  }
 }

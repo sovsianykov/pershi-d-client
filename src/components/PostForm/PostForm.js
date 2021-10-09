@@ -1,8 +1,9 @@
 import React, {useCallback, useState} from 'react';
-import {Button, FormGroup, Input, InputLabel, TextareaAutosize, TextField} from "@material-ui/core";
+import { FormGroup, Input, InputLabel, TextareaAutosize } from "@material-ui/core";
 import styles from './PostForm.module.scss'
 import {format} from "date-fns";
 import {postData} from "../../api/postData";
+import CustomButton from "../Button/Button";
 
 const PostForm = () => {
     const [ title, setTitle] =useState('');
@@ -13,14 +14,12 @@ const PostForm = () => {
     const changeTitleHandler = useCallback((e) =>{
         setTitle( e.target.value)
     },[setTitle])
-    console.log(message)
     const onSubmitHandler = useCallback((e) => {
         e.preventDefault();
-
         const currentPost = {
             "title": title,
             "message": message,
-            "date": format(Date.now(),'hh/mm - dd/MM/yy')
+            "date": format(Date.now(),'hh/mm - EEEE - dd/MM/yy')
         }
           postData(currentPost)
         console.log(currentPost)
@@ -51,7 +50,7 @@ const PostForm = () => {
                      onChange={changeMessageHandler}
                  />
             </InputLabel>
-            <Button color='secondary' type='submit' onClick={onSubmitHandler}  >Submit</Button>
+            <CustomButton  variant='contained'  type='submit' onClick={onSubmitHandler}  >Додати</CustomButton>
 
         </FormGroup>
     );
