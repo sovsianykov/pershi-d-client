@@ -8,7 +8,7 @@ const Announcement = ({ announcement }) => {
                   <Typography variant='h6' align='center' >
                       {announcement.date}
                   </Typography>
-                  <Typography variant='h4' align='center' >
+                  <Typography variant='h5' align='center' >
                       {announcement.title}
                   </Typography>
                   <Typography variant='subtitle1' align='center' >
