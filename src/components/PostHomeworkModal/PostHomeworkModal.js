@@ -1,5 +1,4 @@
-import React, {useCallback, useMemo, useState} from 'react';
-import styles from './PostHomeworkModal.module.scss';
+import React, {useCallback, useMemo} from 'react';
 import cn from 'classnames'
 import {Button, Paper } from "@material-ui/core";
 import PostForm from "../PostForm/PostForm";
