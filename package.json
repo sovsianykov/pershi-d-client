@@ -19,6 +19,11 @@
     "web-vitals": "^1.1.2",
     "@material-ui/styles": "^4.11.4"
   },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -44,7 +49,11 @@
     ]
   },
   "devDependencies": {
-
     "prettier": "^2.4.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
