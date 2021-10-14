@@ -1,13 +1,15 @@
 import React from 'react';
 import Routing from "./Routing/Routing";
+import { ThemeProvider } from "@material-ui/styles";
+import theme from "./constants/theme";
 
 
 const App = () => {
 
     return (
-        <div>
+        <ThemeProvider theme={theme}>
             <Routing />
-        </div>
+        </ThemeProvider>
     );
 };
 

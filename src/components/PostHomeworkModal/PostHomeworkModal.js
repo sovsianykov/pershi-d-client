@@ -40,6 +40,10 @@ const useStyles  = makeStyles(() => ({
           }
 
     },
+    btn : {
+         marginBottom: 10,
+    }
+
 
 
 }))
@@ -55,7 +59,6 @@ const PostHomeworkModal = ({onClick, active}) => {
     [classes.modalActive]: active,
         }),[active,classes.modal,classes.modalActive])
     const onClickHandler = useCallback(()=>{
-
         onClick()
     },[onClick])
 
@@ -63,7 +66,12 @@ const PostHomeworkModal = ({onClick, active}) => {
         <div className={classNames} onClick={onClickHandler} >
             <Paper className={classes.contentModal} onClick={e => e.stopPropagation()} >
                  <PostForm/>
-                <Button color='secondary' onClick={onClickHandler} >Закрити</Button>
+                <Button
+                    variant='contained'
+                    color='secondary'
+                    className={classes.btn}
+                    onClick={onClickHandler}
+                >Закрити</Button>
             </Paper>
         </div>
     );

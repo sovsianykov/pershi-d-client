@@ -1,13 +1,22 @@
 import React from 'react';
 import styles from "./Home.module.scss"
-import Announcement from "../../components/Annoncement/Announcement";
-import { greeting, schedule } from "../../content/announcements";
+import Timetable from "../../components/Scasual/Timetable";
+import { format } from "date-fns";
+
+
+
+
+
 
 const Home = () => {
+  const currentDate = Date.now();
+  const toMorrowDate = Date.now() + 86400000
     return (
         <main className={styles.home}>
-           <Announcement announcement={ greeting } />
-           <Announcement announcement={ schedule } />
+            <Timetable weekDay={format(currentDate,'EEEE') } subtitle='сьогоднi' date={currentDate}
+            />
+            <Timetable weekDay={format(toMorrowDate,'EEEE')} subtitle='завтра' date={toMorrowDate}
+            />
         </main>
     );
 };
