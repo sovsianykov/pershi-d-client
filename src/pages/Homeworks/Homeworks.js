@@ -4,6 +4,7 @@ import PostHomeworkModal from "../../components/PostHomeworkModal/PostHomeworkMo
 import  Button  from "../../components/Button/Button";
 import {useFetch} from "../../api/fetchData";
 import Announcement from "../../components/Annoncement/Announcement";
+import {loadState, saveState} from "../../localStorage/localStorage";
 
 
 const Homeworks = () => {
@@ -13,7 +14,7 @@ const Homeworks = () => {
     },[active])
 
     const { error , isLoading, messages} = useFetch();
-
+    saveState(messages)
 
 
     if (isLoading) {
@@ -23,6 +24,7 @@ const Homeworks = () => {
         return <h4>{error}</h4>
     }
 
+    loadState(messages)
     return (
         <div className={styles.homeWork}>
             <Announcement announcement={messages[messages.length - 1] }/>
