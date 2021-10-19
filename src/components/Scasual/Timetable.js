@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => {
         lesson : {
             margin : "0 auto 0 90px ",
             fontWeight: 600,
-            fontSize: 20,
+            fontSize: 18,
             letterSpacing: ".2rem",
             color: theme.palette.lesson
         },
@@ -21,7 +21,7 @@ const Timetable = ({weekDay,subtitle,date}) => {
     const classes = useStyles()
     return (
         <Paper className={ styles.container }  >
-            <Typography variant='h5'  >
+            <Typography variant='h6'  >
               Розклад на {subtitle}
             </Typography>
             <Typography variant='h6'  >
