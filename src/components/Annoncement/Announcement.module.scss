@@ -1,11 +1,15 @@
 .container {
   margin-top: 20px;
-  width: 375px;
+  width: 370px;
   padding: 10px;
   display: flex;
   max-height: 30vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 10px
+  border-radius: 10px;
+  .message {
+    padding: 0 20px;
+  }
+
 }
