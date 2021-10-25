@@ -1,10 +1,11 @@
 .container {
-  margin-top: 10px;
+  margin-top: 20px;
   width: 375px;
   padding: 10px;
   display: flex;
+  max-height: 30vh;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   border-radius: 10px
 }

@@ -41,8 +41,8 @@ export const TIMETABLE = {
     day: "Четвер",
     lesson_1: "ЯДС",
     lesson_2: "Математика",
-    lesson_3: "Математика",
-    lesson_4: "Мистецтво (образотворче)",
+    lesson_3: "Мистецтво (образотворче)",
+    lesson_4: "Хореографiя",
     lesson_5: "",
   },
   [WEEKDAYS.Friday] : {
